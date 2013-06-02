@@ -91,7 +91,6 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
         }
         function myLoadPlayer(sAction, hOptions) {
             var modelId = hOptions ? hOptions['broadcaster_id'] : location.search.match(/broadcaster_id=(\d+)/)[1];
-            console.log(modelId);
             //            try {
             mfcLoadPlayer(sAction, hOptions);
             modelChanged(hOptions ? hOptions['broadcaster_id'] : null);
@@ -329,6 +328,10 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
 
         }
         function handleTip(tip, tipSpan) {
+            //leave if it looks like this is a spoof tip
+            if (tip[0].indexOf(":") > 0)
+                return;
+
             //parse the values
             var amount = parseInt(tip[2]);
             var contributor = tip[1];
