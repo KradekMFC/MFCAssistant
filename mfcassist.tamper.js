@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name MFC Assistant
-// @version	0.1.26
+// @version	0.1.27
 // @description	Assists MFC models/users track countdowns and some other basic stats regarding tips received.
 // @include	http://www.myfreecams.com/*
 // @match http://www.myfreecams.com/*
@@ -82,10 +82,16 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
             localStorage['mfca_soundEnabled'] = localStorage['mfca_soundEnabled'] ? localStorage['mfca_soundEnabled'] : 'enabled';
             localStorage['mfca_friendSound'] = localStorage['mfca_friendSound'] ? localStorage['mfca_friendSound'] : 0;
 
+            //fire the modelchanged event if this is a popup
+            if (opener){
+                setTimeout(function(){
+                    modelChanged(location.search.match(/broadcaster_id=(\d+)/)[1]);
+                },1000);
+            }
         }
         function myLoadPlayer(sAction, hOptions) {
             var modelId = hOptions ? hOptions['broadcaster_id'] : location.search.match(/broadcaster_id=(\d+)/)[1];
-
+            console.log(modelId);
             //            try {
             mfcLoadPlayer(sAction, hOptions);
             modelChanged(hOptions ? hOptions['broadcaster_id'] : null);
