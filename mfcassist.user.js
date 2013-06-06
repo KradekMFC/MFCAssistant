@@ -328,10 +328,6 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
 
         }
         function handleTip(tip, tipSpan) {
-            //leave if it looks like this is a spoof tip
-            if (tip[0].indexOf(":") > 0)
-                return;
-
             //parse the values
             var amount = parseInt(tip[2]);
             var contributor = tip[1];
