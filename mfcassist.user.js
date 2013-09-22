@@ -386,12 +386,12 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
             setupHTML();
 
             //make sure we entered a models room (and not a lounge or the homepage)
-            if (undefined !== unsafeWindow.g_tRef.g_hLoungeIds[modelId] || null == modelId) {
+            if (undefined !== unsafeWindow.t.g_hLoungeIds[modelId] || null == modelId) {
                 document.querySelector('#ma-menu').setAttribute('class', 'hidden');
                 return;
             }
 
-            currentModelName = unsafeWindow.g_tRef.g_hUsers[modelId]["username"];
+            currentModelName = unsafeWindow.t.g_hUsers[modelId]["username"];
             document.querySelector('#ma-menu').setAttribute('class', 'show');
             tipRegex = "(.*) has tipped $$model$$ (.*) tokens.".replace("$$model$$", currentModelName);
             killRegex = "^the soap is a lye$";
