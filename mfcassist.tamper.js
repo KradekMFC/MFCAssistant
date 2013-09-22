@@ -391,7 +391,7 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
                 return;
             }
 
-            currentModelName = unsafeWindow.g_tRef.g_hUsers[modelId]["username"];
+            currentModelName = unsafeWindow.t.g_hUsers[modelId]["username"];
             document.querySelector('#ma-menu').setAttribute('class', 'show');
             tipRegex = "(.*) has tipped $$model$$ (.*) tokens.".replace("$$model$$", currentModelName);
             killRegex = "^the soap is a lye$";
