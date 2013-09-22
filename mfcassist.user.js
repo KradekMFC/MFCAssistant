@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name MFC Assistant
-// @version	0.1.27
+// @version	0.1.28
 // @description	Assists MFC models/users track countdowns and some other basic stats regarding tips received.
 // @include	http://www.myfreecams.com/*
 // @match http://www.myfreecams.com/*
