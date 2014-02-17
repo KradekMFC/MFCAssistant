@@ -328,6 +328,7 @@ if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/pl
 
         }
         function handleTip(tip, tipSpan) {
+            if( tipSpan.getAttribute( 'class' ).indexOf( 'chat_system' ) === -1 ) return;
             //parse the values
             var amount = parseInt(tip[2]);
             var contributor = tip[1];
