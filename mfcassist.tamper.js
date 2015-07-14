@@ -4,6 +4,7 @@
 // @description	Assists MFC models/users track countdowns and some other basic stats regarding tips received.
 // @include	http://www.myfreecams.com/*
 // @match http://www.myfreecams.com/*
+// @grant GM_addStyle
 
 // ==/UserScript==
 
