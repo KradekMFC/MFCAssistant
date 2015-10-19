@@ -18,7 +18,7 @@ if (navigator.userAgent.match(/chrome/i)) {
 }
 
 //for some reason @match doesn't appear to work properly in Chrome, so check it here
-if (0 === window.location.href.indexOf('http://www.myfreecams.com/mfc2/static/player.html')) {
+if (0 === window.location.href.indexOf('http://www.myfreecams.com/_html/player.html')) {
 
     var maStyles = [
         '    #ma-alert ',
